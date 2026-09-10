@@ -1,0 +1,137 @@
+{
+  "12": {
+    "uf": "AC",
+    "estado": "Acre",
+    "regiao": "Norte"
+  },
+  "27": {
+    "uf": "AL",
+    "estado": "Alagoas",
+    "regiao": "Nordeste"
+  },
+  "16": {
+    "uf": "AP",
+    "estado": "Amapá",
+    "regiao": "Norte"
+  },
+  "13": {
+    "uf": "AM",
+    "estado": "Amazonas",
+    "regiao": "Norte"
+  },
+  "29": {
+    "uf": "BA",
+    "estado": "Bahia",
+    "regiao": "Nordeste"
+  },
+  "23": {
+    "uf": "CE",
+    "estado": "Ceará",
+    "regiao": "Nordeste"
+  },
+  "53": {
+    "uf": "DF",
+    "estado": "Distrito Federal",
+    "regiao": "Centro-Oeste"
+  },
+  "32": {
+    "uf": "ES",
+    "estado": "Espírito Santo",
+    "regiao": "Sudeste"
+  },
+  "52": {
+    "uf": "GO",
+    "estado": "Goiás",
+    "regiao": "Centro-Oeste"
+  },
+  "21": {
+    "uf": "MA",
+    "estado": "Maranhão",
+    "regiao": "Nordeste"
+  },
+  "51": {
+    "uf": "MT",
+    "estado": "Mato Grosso",
+    "regiao": "Centro-Oeste"
+  },
+  "50": {
+    "uf": "MS",
+    "estado": "Mato Grosso do Sul",
+    "regiao": "Centro-Oeste"
+  },
+  "31": {
+    "uf": "MG",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste"
+  },
+  "15": {
+    "uf": "PA",
+    "estado": "Pará",
+    "regiao": "Norte"
+  },
+  "25": {
+    "uf": "PB",
+    "estado": "Paraíba",
+    "regiao": "Nordeste"
+  },
+  "41": {
+    "uf": "PR",
+    "estado": "Paraná",
+    "regiao": "Sul"
+  },
+  "26": {
+    "uf": "PE",
+    "estado": "Pernambuco",
+    "regiao": "Nordeste"
+  },
+  "22": {
+    "uf": "PI",
+    "estado": "Piauí",
+    "regiao": "Nordeste"
+  },
+  "33": {
+    "uf": "RJ",
+    "estado": "Rio de Janeiro",
+    "regiao": "Sudeste"
+  },
+  "24": {
+    "uf": "RN",
+    "estado": "Rio Grande do Norte",
+    "regiao": "Nordeste"
+  },
+  "43": {
+    "uf": "RS",
+    "estado": "Rio Grande do Sul",
+    "regiao": "Sul"
+  },
+  "11": {
+    "uf": "RO",
+    "estado": "Rondônia",
+    "regiao": "Norte"
+  },
+  "14": {
+    "uf": "RR",
+    "estado": "Roraima",
+    "regiao": "Norte"
+  },
+  "42": {
+    "uf": "SC",
+    "estado": "Santa Catarina",
+    "regiao": "Sul"
+  },
+  "35": {
+    "uf": "SP",
+    "estado": "São Paulo",
+    "regiao": "Sudeste"
+  },
+  "28": {
+    "uf": "SE",
+    "estado": "Sergipe",
+    "regiao": "Nordeste"
+  },
+  "17": {
+    "uf": "TO",
+    "estado": "Tocantins",
+    "regiao": "Norte"
+  }
+}

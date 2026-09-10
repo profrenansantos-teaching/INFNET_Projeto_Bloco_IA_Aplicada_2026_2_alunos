@@ -1,0 +1,4 @@
+# Dependências do Painel ODS Brasil — Aula 1
+# Usamos só Python puro + Streamlit (sem pandas neste início).
+# Na Aula 2 adicionaremos 'requests' para a coleta via API do IBGE.
+streamlit>=1.40

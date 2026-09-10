@@ -1,0 +1,22 @@
+# Ambiente virtual — RECONSTRUÍVEL a partir do requirements.txt.
+# Contém binários compilados para UM sistema operacional: inúteis no servidor.
+.venv/
+venv/
+env/
+
+# Caches do Python — gerados a cada execução.
+__pycache__/
+*.py[cod]
+
+# SEGREDOS — o repositório do Community Cloud é PÚBLICO por padrão.
+# Versione apenas o .example, com as chaves em branco.
+.streamlit/secrets.toml
+.env
+
+# Sistema operacional / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# NÃO ignoramos data/sample/: o cache de fallback é PARTE do comportamento do app.

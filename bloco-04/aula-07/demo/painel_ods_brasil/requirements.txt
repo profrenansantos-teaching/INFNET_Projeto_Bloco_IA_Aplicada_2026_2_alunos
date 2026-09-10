@@ -1,0 +1,13 @@
+# Dependências do Painel ODS Brasil — v3 (Aula 5)
+# Python puro: coleta via API (requests) + Streamlit (sem pandas).
+# Regra do curso: instalou biblioteca nova -> acrescenta AQUI na mesma hora.
+streamlit>=1.40
+requests>=2.28
+# urllib3 já vem junto com requests, MAS nós o importamos DIRETAMENTE em
+# src/data_access.py — e o que se importa, se declara. Depender de dependência
+# alheia é apostar que ela nunca vai mudar.
+urllib3>=2.0
+
+# WebScraping (v5, Aula 7): analisador de HTML. Usamos o parser "html.parser",
+# que vem com o Python — por isso NÃO declaramos lxml aqui.
+beautifulsoup4>=4.12

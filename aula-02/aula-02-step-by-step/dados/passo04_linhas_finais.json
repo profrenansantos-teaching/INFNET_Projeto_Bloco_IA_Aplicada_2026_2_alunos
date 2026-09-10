@@ -1,0 +1,164 @@
+[
+  {
+    "uf": "RO",
+    "estado": "Rondônia",
+    "regiao": "Norte",
+    "populacao_2025": 1751950
+  },
+  {
+    "uf": "AC",
+    "estado": "Acre",
+    "regiao": "Norte",
+    "populacao_2025": 884372
+  },
+  {
+    "uf": "AM",
+    "estado": "Amazonas",
+    "regiao": "Norte",
+    "populacao_2025": 4321616
+  },
+  {
+    "uf": "RR",
+    "estado": "Roraima",
+    "regiao": "Norte",
+    "populacao_2025": 738772
+  },
+  {
+    "uf": "PA",
+    "estado": "Pará",
+    "regiao": "Norte",
+    "populacao_2025": 8711196
+  },
+  {
+    "uf": "AP",
+    "estado": "Amapá",
+    "regiao": "Norte",
+    "populacao_2025": 806517
+  },
+  {
+    "uf": "TO",
+    "estado": "Tocantins",
+    "regiao": "Norte",
+    "populacao_2025": 1586859
+  },
+  {
+    "uf": "MA",
+    "estado": "Maranhão",
+    "regiao": "Nordeste",
+    "populacao_2025": 7018211
+  },
+  {
+    "uf": "PI",
+    "estado": "Piauí",
+    "regiao": "Nordeste",
+    "populacao_2025": 3384547
+  },
+  {
+    "uf": "CE",
+    "estado": "Ceará",
+    "regiao": "Nordeste",
+    "populacao_2025": 9268836
+  },
+  {
+    "uf": "RN",
+    "estado": "Rio Grande do Norte",
+    "regiao": "Nordeste",
+    "populacao_2025": 3455236
+  },
+  {
+    "uf": "PB",
+    "estado": "Paraíba",
+    "regiao": "Nordeste",
+    "populacao_2025": 4164468
+  },
+  {
+    "uf": "PE",
+    "estado": "Pernambuco",
+    "regiao": "Nordeste",
+    "populacao_2025": 9562007
+  },
+  {
+    "uf": "AL",
+    "estado": "Alagoas",
+    "regiao": "Nordeste",
+    "populacao_2025": 3220848
+  },
+  {
+    "uf": "SE",
+    "estado": "Sergipe",
+    "regiao": "Nordeste",
+    "populacao_2025": 2299425
+  },
+  {
+    "uf": "BA",
+    "estado": "Bahia",
+    "regiao": "Nordeste",
+    "populacao_2025": 14870907
+  },
+  {
+    "uf": "MG",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "populacao_2025": 21393441
+  },
+  {
+    "uf": "ES",
+    "estado": "Espírito Santo",
+    "regiao": "Sudeste",
+    "populacao_2025": 4126854
+  },
+  {
+    "uf": "RJ",
+    "estado": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "populacao_2025": 17223547
+  },
+  {
+    "uf": "SP",
+    "estado": "São Paulo",
+    "regiao": "Sudeste",
+    "populacao_2025": 46081801
+  },
+  {
+    "uf": "PR",
+    "estado": "Paraná",
+    "regiao": "Sul",
+    "populacao_2025": 11890517
+  },
+  {
+    "uf": "SC",
+    "estado": "Santa Catarina",
+    "regiao": "Sul",
+    "populacao_2025": 8187029
+  },
+  {
+    "uf": "RS",
+    "estado": "Rio Grande do Sul",
+    "regiao": "Sul",
+    "populacao_2025": 11233263
+  },
+  {
+    "uf": "MS",
+    "estado": "Mato Grosso do Sul",
+    "regiao": "Centro-Oeste",
+    "populacao_2025": 2924631
+  },
+  {
+    "uf": "MT",
+    "estado": "Mato Grosso",
+    "regiao": "Centro-Oeste",
+    "populacao_2025": 3893659
+  },
+  {
+    "uf": "GO",
+    "estado": "Goiás",
+    "regiao": "Centro-Oeste",
+    "populacao_2025": 7423629
+  },
+  {
+    "uf": "DF",
+    "estado": "Distrito Federal",
+    "regiao": "Centro-Oeste",
+    "populacao_2025": 2996899
+  }
+]

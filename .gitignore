@@ -1,0 +1,30 @@
+# --- Ambientes Python (reconstruíveis a partir do requirements.txt) ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# --- Segredos ---
+# O secrets.toml NUNCA vai para o repositório; o .example (sem valores) vai, e é material da aula.
+.streamlit/secrets.toml
+.env
+*.key
+secrets.*
+!secrets.toml.example
+
+# --- Conteúdo de terceiros baixado da web ---
+# HTML bruto é de terceiros, pesa megabytes e é regenerável: python -m src.coleta_web
+# O que o app lê é o resultado processado, que É versionado: data/processed/
+**/data/raw/*.html
+**/aula-0*-step-by-step/snapshot_*.html
+
+# --- Temporários de sistema e de editor ---
+*.tmp
+*.log
+~$*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

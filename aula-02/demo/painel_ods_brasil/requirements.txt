@@ -1,0 +1,4 @@
+# Dependências do Painel ODS Brasil — Aula 2
+# Python puro: coleta via API (requests) + Streamlit (sem pandas)
+streamlit>=1.40
+requests>=2.28
