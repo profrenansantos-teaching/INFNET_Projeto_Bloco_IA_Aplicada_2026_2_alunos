@@ -1,0 +1,32 @@
+# Ambiente virtual — RECONSTRUÍVEL a partir do requirements.txt.
+# Contém binários compilados para UM sistema operacional: inúteis no servidor.
+.venv/
+venv/
+env/
+
+# Caches do Python — gerados a cada execução.
+__pycache__/
+*.py[cod]
+
+# SEGREDOS — o repositório do Community Cloud é PÚBLICO por padrão.
+# Versione apenas o .example, com as chaves em branco.
+.streamlit/secrets.toml
+.env
+
+# Sistema operacional / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# NÃO ignoramos data/sample/: o cache de fallback é PARTE do comportamento do app.
+
+# --- WebScraping (v5, Aula 7) ---
+# data/raw/ guarda o HTML BRUTO baixado dos sites. Não versionamos:
+#   1. é conteúdo de TERCEIROS (o repositório do Community Cloud é público);
+#   2. pesa megabytes e é regenerável com `python -m src.coleta_web`;
+#   3. o app não lê daqui — ele lê data/processed/.
+data/raw/*.html
+
+# data/processed/ É VERSIONADO de propósito: é o que o app publicado precisa
+# para funcionar. Sem ele, o painel no ar abre sem notícias.

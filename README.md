@@ -31,6 +31,7 @@ forma de ver a progressão.
 | **6** | [bloco-03/aula-06/](bloco-03/aula-06/) | O painel responde ao usuário (widgets, formulário, estado) | 3 | TP2 |
 | **7** | [bloco-04/aula-07/](bloco-04/aula-07/) | Quando não existe API (extração de conteúdo web) | 4 | TP2 |
 | **8** | [bloco-04/aula-08/](bloco-04/aula-08/) | O arquivo entra, o arquivo sai (upload/download, cache, estado) | 4 | TP2 |
+| **9** | [bloco-05/aula-09/](bloco-05/aula-09/) | Uma pergunta, uma página (aplicação multipáginas) | 5 | TP3 |
 
 > As aulas 1 e 2 têm uma **versão paralela para Google Colab** (pastas `-colab`): o mesmo conteúdo,
 > com a parte de dados rodando no navegador, sem instalar nada. O **app Streamlit** continua local.
@@ -42,8 +43,8 @@ forma de ver a progressão.
 | Arquivo / pasta | Para quê |
 |-----------------|----------|
 | `student-guide.md` | **Comece por aqui.** O material de apoio: o que ler antes, a cola de código da aula, os erros comuns e o checklist do TP. |
-| `PB_IA_Aplicada_AulaXX_slides.pptx` | O deck completo da aula (versão de referência, com os slides extras). |
 | `Aula XX-DDMMM2026.pdf` | Os slides **como foram apresentados** em sala, em PDF. |
+| `PB_IA_Aplicada_AulaXX_slides.pptx` | O deck completo da aula (versão de referência). **Só até a Aula 8** — a partir da Aula 9, os slides vêm apenas em PDF. |
 | `aula-XX-step-by-step/` | Os **passos executáveis**: um arquivo por conceito, que roda sozinho e explica no `print` o que acabou de acontecer. Tem um `README.md` com a ordem recomendada. |
 | `demo/painel_ods_brasil/` | O **código do painel** na versão daquela aula, rodável. |
 
