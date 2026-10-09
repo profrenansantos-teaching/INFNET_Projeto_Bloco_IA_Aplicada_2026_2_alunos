@@ -1,0 +1,24 @@
+# Ambiente da API — Painel ODS Brasil (v9, Aula 11)
+#
+# A API roda NA SUA MÁQUINA, noutro terminal, ao lado do app:
+#     uvicorn api.main:app --reload        (da pasta painel_ods_brasil/)
+#
+# Por que um arquivo só para ela — a mesma regra do requirements-coleta.txt:
+#   · o Community Cloud instala o requirements.txt e roda o app Streamlit. O app
+#     não importa o FastAPI; lá, ele seria peso morto no build;
+#   · o que se importa, se declara (Aula 5) — no arquivo do ambiente que importa.
+#
+# A API reaproveita src/ (as mesmas leituras do painel), por isso inclui tudo
+# o que o app usa.
+-r requirements.txt
+
+# O framework. Traz o Pydantic (validação pelos tipos) e o Starlette.
+fastapi>=0.115
+
+# O servidor que RODA a API. O Streamlit 1.61 já o instala por dependência própria
+# — mas a API o usa diretamente, e depender de dependência alheia é apostar que ela
+# nunca vai mudar (a lição do urllib3, na v3).
+uvicorn>=0.30
+
+# NÃO usamos "fastapi[standard]": ele traz o comando `fastapi dev` e mais uma dúzia
+# de pacotes (httpx, jinja2, email-validator, fastapi-cloud-cli…) que esta API não usa.

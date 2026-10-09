@@ -1,0 +1,4 @@
+# O app deste passo IMPORTA o selenium — então ele entra aqui (o que se importa, se declara).
+streamlit>=1.40
+selenium>=4.20
+beautifulsoup4>=4.12

@@ -1,0 +1,14 @@
+# Ambiente da COLETA — Painel ODS Brasil (v8, Aula 10)
+#
+# O app publicado usa requirements.txt. A coleta, que roda À PARTE no seu
+# terminal, precisa de tudo aquilo E do Selenium. Por que dois arquivos:
+#   · o Community Cloud instala o requirements.txt. O app não importa o Selenium,
+#     então ele lá seria peso morto no build (e o servidor nem traz navegador);
+#   · o que se importa, se declara (Aula 5) — no arquivo do ambiente que importa.
+#
+# Instalar:  pip install -r requirements-coleta.txt
+# Coletar:   python -m src.coleta_dinamica
+-r requirements.txt
+# Pilota um navegador de verdade. Precisa do Google Chrome instalado; o driver,
+# o próprio Selenium (≥ 4.6, Selenium Manager) baixa na primeira execução.
+selenium>=4.20

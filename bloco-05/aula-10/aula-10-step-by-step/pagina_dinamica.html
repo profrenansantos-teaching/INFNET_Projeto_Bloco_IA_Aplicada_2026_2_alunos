@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Página dinâmica de exercício — Aula 10</title>
+<!--
+  Página de EXERCÍCIO da Aula 10. Imita, em miniatura e SEM REDE, o que o painel do
+  TerraBrasilis faz: o HTML que chega tem a tabela VAZIA; o JavaScript abaixo a
+  preenche DEPOIS, linha a linha — e só mostra os anos anteriores quando alguém
+  clica no botão.
+
+  Os números são reais: taxas anuais de desmatamento do PRODES/INPE por UF
+  (TerraBrasilis, CC BY-SA 4.0), copiados para este exercício em 23/09/2026.
+  Os tempos (800 ms, 250 ms por linha, 600 ms) são de mentira, escolhidos para
+  que a diferença entre as esperas apareça.
+-->
+<style>
+  body { font-family: system-ui, sans-serif; margin: 2rem; color: #17375E; }
+  table { border-collapse: collapse; margin-top: 1rem; min-width: 22rem; }
+  th, td { border-bottom: 1px solid #ccd; padding: .35rem .8rem; text-align: left; }
+  td.area { text-align: right; font-variant-numeric: tabular-nums; }
+  #status { color: #8A6100; font-weight: bold; }
+  .fonte { color: #5B6B7B; font-size: .85rem; }
+</style>
+</head>
+<body>
+<h1>Desmatamento na Amazônia Legal, por UF</h1>
+<p class="fonte">PRODES/INPE — TerraBrasilis · CC BY-SA 4.0 · página de exercício, sem rede</p>
+<p id="status">Carregando…</p>
+
+<table id="tabela" data-status="carregando">
+  <thead><tr><th>UF</th><th>Ano</th><th>Área (km²)</th></tr></thead>
+  <tbody></tbody>
+</table>
+<p><button id="mais" hidden>Mostrar 2024</button></p>
+
+<script>
+const ANO_2025 = [["AC", 324], ["AP", 17], ["AM", 979], ["MA", 210], ["MT", 1593],
+                  ["PA", 2064], ["RO", 229], ["RR", 285], ["TO", 30]];
+const ANO_2024 = [["AC", 449], ["AP", 27], ["AM", 1223], ["MA", 307], ["MT", 1257],
+                  ["PA", 2395], ["RO", 360], ["RR", 468], ["TO", 32]];
+
+const corpo = document.querySelector("#tabela tbody");
+const tabela = document.getElementById("tabela");
+const status = document.getElementById("status");
+const botao = document.getElementById("mais");
+
+// Acrescenta as linhas UMA A UMA, a cada 250 ms — como uma página que vai
+// recebendo os dados aos pedaços.
+function aosPoucos(ano, linhas, quandoTerminar) {
+  let i = 0;
+  const relogio = setInterval(() => {
+    if (i >= linhas.length) { clearInterval(relogio); quandoTerminar(); return; }
+    const [uf, area] = linhas[i++];
+    const tr = document.createElement("tr");
+    tr.className = "linha";
+    tr.innerHTML = `<td>${uf}</td><td>${ano}</td><td class="area">${area.toLocaleString("pt-BR")},00</td>`;
+    corpo.appendChild(tr);
+  }, 250);
+}
+
+// 800 ms depois de a página abrir, os dados de 2025 começam a chegar.
+setTimeout(() => aosPoucos(2025, ANO_2025, () => {
+  status.textContent = "9 UFs carregadas";
+  tabela.dataset.status = "pronto";
+  botao.hidden = false;
+}), 800);
+
+// O clique pede 2024: mais 600 ms de "rede", e as linhas chegam aos poucos de novo.
+botao.addEventListener("click", () => {
+  botao.disabled = true;
+  status.textContent = "Carregando 2024…";
+  tabela.dataset.status = "carregando";
+  setTimeout(() => aosPoucos(2024, ANO_2024, () => {
+    status.textContent = "18 linhas carregadas";
+    tabela.dataset.status = "pronto";
+  }), 600);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "coletado_em": "01/10/2026 21:50",
+  "site": "INPE/PRODES — TerraBrasilis",
+  "url": "https://terrabrasilis.dpi.inpe.br/app/dashboard/deforestation/biomes/legal_amazon/rates",
+  "licenca": "Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0)",
+  "ferramenta": "Selenium (Chrome sem janela) + BeautifulSoup",
+  "origem_desta_gravacao": "navegador",
+  "linhas": 342,
+  "ufs": 9,
+  "anos": "1988–2025",
+  "segundos": 6.7
+}

@@ -7,7 +7,7 @@ personalizadas.
 | Aula | Subcomp. | Tema | Ideia-força |
 |:----:|:--------:|------|-------------|
 | [aula-09/](aula-09/) | **3.1** | **Uma pergunta, uma página** | roteador → páginas → **estado entre páginas** → link direto |
-| aula-10 *(em breve)* | **3.2** | **Quando o dado chega depois** | a casca → a escada → Selenium → esperar pela condição |
+| [aula-10/](aula-10/) | **3.2** | **Quando o dado chega depois** | a casca → a escada → Selenium → esperar pela condição |
 
 | Subcomp. | O que você deve ser capaz de fazer | Leitura de apoio |
 |---------:|-----------------------------------|------------------|
@@ -34,5 +34,20 @@ cd aula-09/demo/painel_ods_brasil
 streamlit run app.py
 ```
 
-**O TP3 abre na Aula 9.** O que dele já dá para entregar está na seção 8 do
-[`aula-09/student-guide.md`](aula-09/student-guide.md).
+**A Aula 10 precisa do Google Chrome** instalado e de um ambiente próprio para a coleta — o app não
+abre navegador:
+
+```bash
+cd aula-10/demo/painel_ods_brasil
+pip install -r requirements-coleta.txt     # tudo do app + selenium
+python -m src.coleta_dinamica              # coleta à parte -> data/processed/
+streamlit run app.py                       # o app só lê o CSV
+```
+
+Os passos 1 a 4 de [`aula-10/aula-10-step-by-step/`](aula-10/aula-10-step-by-step/) **não precisam de
+internet**: eles usam uma página de exercício local. O driver do Chrome, o próprio Selenium baixa na
+primeira execução (essa vez, sim, com rede).
+
+**O TP3 abre na Aula 9.** O checklist do item 2 está na seção 8 do
+[`aula-09/student-guide.md`](aula-09/student-guide.md); o do item 3 (*Selenium, se necessário*), na seção 10
+do [`aula-10/student-guide.md`](aula-10/student-guide.md). **O TP3 fecha no Bloco 6.**

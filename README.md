@@ -32,6 +32,8 @@ forma de ver a progressão.
 | **7** | [bloco-04/aula-07/](bloco-04/aula-07/) | Quando não existe API (extração de conteúdo web) | 4 | TP2 |
 | **8** | [bloco-04/aula-08/](bloco-04/aula-08/) | O arquivo entra, o arquivo sai (upload/download, cache, estado) | 4 | TP2 |
 | **9** | [bloco-05/aula-09/](bloco-05/aula-09/) | Uma pergunta, uma página (aplicação multipáginas) | 5 | TP3 |
+| **10** | [bloco-05/aula-10/](bloco-05/aula-10/) | Quando o dado chega depois (páginas dinâmicas com Selenium) | 5 | TP3 |
+| **11** | [bloco-06/aula-11/](bloco-06/aula-11/) | Do outro lado da API (FastAPI: o ambiente e as primeiras rotas) | 6 | TP3 |
 
 > As aulas 1 e 2 têm uma **versão paralela para Google Colab** (pastas `-colab`): o mesmo conteúdo,
 > com a parte de dados rodando no navegador, sem instalar nada. O **app Streamlit** continua local.
@@ -77,6 +79,14 @@ A partir da Aula 7, a **coleta** é uma etapa separada do app — rode-a antes:
 ```bash
 python -m src.coleta_web     # coleta e grava em data/processed/
 streamlit run app.py         # o app lê o que a coleta gravou
+```
+
+A partir da Aula 11, o projeto tem também uma **API** (FastAPI), que roda **noutro terminal**, ao lado do
+app — sempre **da pasta `painel_ods_brasil/`**:
+
+```bash
+pip install -r requirements-api.txt      # tudo do app + fastapi + uvicorn
+uvicorn api.main:app --reload            # e abra http://127.0.0.1:8000/docs
 ```
 
 ---
