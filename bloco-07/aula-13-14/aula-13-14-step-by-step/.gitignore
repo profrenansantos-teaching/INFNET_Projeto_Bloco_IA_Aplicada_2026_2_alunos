@@ -1,0 +1,3 @@
+# O passo 3 pede para renomear regras_passo03.json — a cópia renomeada não vai para o Git.
+*.bak
+__pycache__/

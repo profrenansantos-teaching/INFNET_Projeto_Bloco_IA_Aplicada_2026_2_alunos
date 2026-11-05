@@ -1,0 +1,9 @@
+[theme]
+# Identidade visual INFNET (mesma paleta dos slides).
+primaryColor = "#4F81BD"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#EAF0F7"
+textColor = "#17375E"
+
+[server]
+headless = true

@@ -35,6 +35,7 @@ forma de ver a progressão.
 | **10** | [bloco-05/aula-10/](bloco-05/aula-10/) | Quando o dado chega depois (páginas dinâmicas com Selenium) | 5 | TP3 |
 | **11** | [bloco-06/aula-11/](bloco-06/aula-11/) | Do outro lado da API (FastAPI: o ambiente e as primeiras rotas) | 6 | TP3 |
 | **12** | [bloco-06/aula-12/](bloco-06/aula-12/) | Quem recebe, valida (FastAPI: POST, validação, routers, o painel como cliente) | 6 | TP4 |
+| **13–14** | [bloco-07/aula-13-14/](bloco-07/aula-13-14/) · [aula-13/](bloco-07/aula-13/) · [aula-14/](bloco-07/aula-14/) | Quem responde, promete; quem falha, explica (FastAPI: response models e exceções HTTP) | 7 | TP4 |
 
 > As aulas 1 e 2 têm uma **versão paralela para Google Colab** (pastas `-colab`): o mesmo conteúdo,
 > com a parte de dados rodando no navegador, sem instalar nada. O **app Streamlit** continua local.

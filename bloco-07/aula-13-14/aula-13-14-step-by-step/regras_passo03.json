@@ -1,0 +1,22 @@
+{
+  "queimada": [
+    "fumaça",
+    "fogo",
+    "queimada"
+  ],
+  "seca": [
+    "seca",
+    "baixou",
+    "estiagem"
+  ],
+  "enchente": [
+    "enchente",
+    "alagou",
+    "cheia"
+  ],
+  "lixo": [
+    "lixo",
+    "entulho",
+    "descarte"
+  ]
+}
