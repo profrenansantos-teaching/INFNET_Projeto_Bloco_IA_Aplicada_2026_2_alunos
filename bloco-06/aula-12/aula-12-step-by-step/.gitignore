@@ -1,0 +1,3 @@
+# Arquivos que os passos 3 e 4 GRAVAM ao receber relatos — gerados na sua máquina.
+relatos_passo0*.csv
+__pycache__/

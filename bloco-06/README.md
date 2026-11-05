@@ -1,5 +1,5 @@
 # Bloco 6 — Desenvolvimento de APIs com FastAPI
-### PB Etapa 6 · Competência 3 · entrega: **TP3** (fecha aqui)
+### PB Etapa 6 · Competência 3 · o **TP3** fechou com a Aula 11 · a Aula 12 já conta para o **TP4**
 
 **Competência 3:** integrar aplicação com múltiplas páginas com dados provenientes de APIs
 personalizadas.
@@ -7,7 +7,7 @@ personalizadas.
 | Aula | Subcomp. | Tema | Ideia-força |
 |:----:|:--------:|------|-------------|
 | [aula-11/](aula-11/) | **3.3** (+3.4) | **Do outro lado da API** | o painel é uma casca para programas → o ambiente → **o tipo é a guarda** → caminho × consulta |
-| aula-12 *(em breve)* | **3.4** | **Quem recebe, valida** | POST + modelo → recusar em voz alta → guardar → routers → o painel como cliente da API |
+| [aula-12/](aula-12/) | **3.4** | **Quem recebe, valida** | POST + modelo → recusar em voz alta → guardar → routers → o painel como cliente da API |
 
 | Subcomp. | O que você deve ser capaz de fazer | Leitura de apoio |
 |---------:|-----------------------------------|------------------|
@@ -42,6 +42,10 @@ integração com o painel.
   `requests`.
 - **Porta 8000 ocupada?** Pare o servidor anterior com **Ctrl+C**. Se ele ficou órfão:
   `netstat -ano | findstr :8000` e `taskkill /PID <número> /F`.
+- **`{"detail":"Not Found"}` em `http://127.0.0.1:8000/`?** O servidor está no ar: alguns passos não têm rota na
+  raiz (como os passos 1 a 3 da Aula 12), e o 404 é a resposta certa. Abra o **`/docs`**.
 
-**O TP3 fecha neste bloco.** O checklist do item 4 (parte 1) está na seção 10 do
-[`aula-11/student-guide.md`](aula-11/student-guide.md); o checklist completo vem com a Aula 12.
+**O TP3 fechou com a Aula 11** — o checklist do item 4 está na seção 10 do
+[`aula-11/student-guide.md`](aula-11/student-guide.md). **A Aula 12 já conta para o TP4** (entrega na semana de
+16–21/11): o que ela cobre e o que vem nas Etapas 7 e 8 está na seção 9 do
+[`aula-12/student-guide.md`](aula-12/student-guide.md).
