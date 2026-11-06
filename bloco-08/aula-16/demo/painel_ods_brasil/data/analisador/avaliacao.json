@@ -1,0 +1,1378 @@
+[
+ {
+  "modelo": "regras",
+  "tarefa": "regras",
+  "dtype": "—",
+  "pesos_mb": 0,
+  "motor": "regras-v1 (palavras-chave)",
+  "prompt": "—",
+  "acertos": 13,
+  "total": 30,
+  "sem_resposta": 17,
+  "s_por_relato": 0.0,
+  "s_max": 0.0,
+  "s_carga": 0.1,
+  "erros": [
+   {
+    "id": "4",
+    "esperada": "enchente",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "7",
+    "esperada": "queimada",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "9",
+    "esperada": "queimada",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "11",
+    "esperada": "desmatamento",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "12",
+    "esperada": "desmatamento",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "13",
+    "esperada": "desmatamento",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "14",
+    "esperada": "enchente",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "17",
+    "esperada": "enchente",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "18",
+    "esperada": "seca",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "19",
+    "esperada": "seca",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "23",
+    "esperada": "poluicao",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "25",
+    "esperada": "poluicao",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "26",
+    "esperada": "poluicao",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "27",
+    "esperada": "lixo",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "29",
+    "esperada": "lixo",
+    "sugerida": null,
+    "resposta": ""
+   },
+   {
+    "id": "30",
+    "esperada": "lixo",
+    "sugerida": null,
+    "resposta": ""
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:35",
+  "arquitetura": "—"
+ },
+ {
+  "modelo": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+  "tarefa": "zero-shot",
+  "dtype": "float32",
+  "pesos_mb": 428,
+  "motor": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+  "prompt": "—",
+  "acertos": 7,
+  "total": 30,
+  "sem_resposta": 0,
+  "s_por_relato": 0.05,
+  "s_max": 0.1,
+  "s_carga": 12.6,
+  "erros": [
+   {
+    "id": "2",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.36)"
+   },
+   {
+    "id": "4",
+    "esperada": "enchente",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.30)"
+   },
+   {
+    "id": "5",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.29)"
+   },
+   {
+    "id": "6",
+    "esperada": "queimada",
+    "sugerida": "poluicao",
+    "resposta": "poluição (0.45)"
+   },
+   {
+    "id": "7",
+    "esperada": "queimada",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.36)"
+   },
+   {
+    "id": "8",
+    "esperada": "queimada",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.23)"
+   },
+   {
+    "id": "9",
+    "esperada": "queimada",
+    "sugerida": "seca",
+    "resposta": "seca (0.49)"
+   },
+   {
+    "id": "10",
+    "esperada": "desmatamento",
+    "sugerida": "lixo",
+    "resposta": "lixo (0.32)"
+   },
+   {
+    "id": "12",
+    "esperada": "desmatamento",
+    "sugerida": "lixo",
+    "resposta": "lixo (0.29)"
+   },
+   {
+    "id": "14",
+    "esperada": "enchente",
+    "sugerida": "poluicao",
+    "resposta": "poluição (0.28)"
+   },
+   {
+    "id": "15",
+    "esperada": "enchente",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.61)"
+   },
+   {
+    "id": "16",
+    "esperada": "enchente",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.50)"
+   },
+   {
+    "id": "17",
+    "esperada": "enchente",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.25)"
+   },
+   {
+    "id": "18",
+    "esperada": "seca",
+    "sugerida": "lixo",
+    "resposta": "lixo (0.35)"
+   },
+   {
+    "id": "19",
+    "esperada": "seca",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.26)"
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.37)"
+   },
+   {
+    "id": "22",
+    "esperada": "poluicao",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.28)"
+   },
+   {
+    "id": "23",
+    "esperada": "poluicao",
+    "sugerida": "lixo",
+    "resposta": "lixo (0.23)"
+   },
+   {
+    "id": "24",
+    "esperada": "poluicao",
+    "sugerida": "lixo",
+    "resposta": "lixo (0.41)"
+   },
+   {
+    "id": "25",
+    "esperada": "poluicao",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.43)"
+   },
+   {
+    "id": "26",
+    "esperada": "poluicao",
+    "sugerida": "lixo",
+    "resposta": "lixo (0.29)"
+   },
+   {
+    "id": "27",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.26)"
+   },
+   {
+    "id": "30",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.45)"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:35",
+  "arquitetura": "encoder"
+ },
+ {
+  "modelo": "facebook/bart-large-mnli",
+  "tarefa": "zero-shot",
+  "dtype": "float32",
+  "pesos_mb": 1629,
+  "motor": "facebook/bart-large-mnli",
+  "prompt": "—",
+  "acertos": 9,
+  "total": 30,
+  "sem_resposta": 0,
+  "s_por_relato": 1.05,
+  "s_max": 1.78,
+  "s_carga": 11.5,
+  "erros": [
+   {
+    "id": "2",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.20)"
+   },
+   {
+    "id": "3",
+    "esperada": "desmatamento",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.24)"
+   },
+   {
+    "id": "5",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.26)"
+   },
+   {
+    "id": "7",
+    "esperada": "queimada",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.23)"
+   },
+   {
+    "id": "8",
+    "esperada": "queimada",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.23)"
+   },
+   {
+    "id": "10",
+    "esperada": "desmatamento",
+    "sugerida": "poluicao",
+    "resposta": "poluição (0.24)"
+   },
+   {
+    "id": "11",
+    "esperada": "desmatamento",
+    "sugerida": "enchente",
+    "resposta": "enchente (0.24)"
+   },
+   {
+    "id": "12",
+    "esperada": "desmatamento",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.24)"
+   },
+   {
+    "id": "13",
+    "esperada": "desmatamento",
+    "sugerida": "poluicao",
+    "resposta": "poluição (0.23)"
+   },
+   {
+    "id": "15",
+    "esperada": "enchente",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.23)"
+   },
+   {
+    "id": "18",
+    "esperada": "seca",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.23)"
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.32)"
+   },
+   {
+    "id": "21",
+    "esperada": "seca",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.29)"
+   },
+   {
+    "id": "22",
+    "esperada": "poluicao",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.23)"
+   },
+   {
+    "id": "23",
+    "esperada": "poluicao",
+    "sugerida": "seca",
+    "resposta": "seca (0.23)"
+   },
+   {
+    "id": "24",
+    "esperada": "poluicao",
+    "sugerida": "enchente",
+    "resposta": "enchente (0.24)"
+   },
+   {
+    "id": "25",
+    "esperada": "poluicao",
+    "sugerida": "seca",
+    "resposta": "seca (0.23)"
+   },
+   {
+    "id": "26",
+    "esperada": "poluicao",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.35)"
+   },
+   {
+    "id": "27",
+    "esperada": "lixo",
+    "sugerida": "enchente",
+    "resposta": "enchente (0.27)"
+   },
+   {
+    "id": "29",
+    "esperada": "lixo",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.28)"
+   },
+   {
+    "id": "30",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.58)"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:36",
+  "arquitetura": "encoder-decoder"
+ },
+ {
+  "modelo": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+  "tarefa": "zero-shot",
+  "dtype": "float16",
+  "pesos_mb": 558,
+  "motor": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+  "prompt": "—",
+  "acertos": 18,
+  "total": 30,
+  "sem_resposta": 0,
+  "s_por_relato": 4.5,
+  "s_max": 4.89,
+  "s_carga": 10.6,
+  "erros": [
+   {
+    "id": "1",
+    "esperada": "queimada",
+    "sugerida": "poluicao",
+    "resposta": "poluição (0.52)"
+   },
+   {
+    "id": "7",
+    "esperada": "queimada",
+    "sugerida": "poluicao",
+    "resposta": "poluição (0.36)"
+   },
+   {
+    "id": "9",
+    "esperada": "queimada",
+    "sugerida": "seca",
+    "resposta": "seca (0.38)"
+   },
+   {
+    "id": "11",
+    "esperada": "desmatamento",
+    "sugerida": "seca",
+    "resposta": "seca (0.45)"
+   },
+   {
+    "id": "12",
+    "esperada": "desmatamento",
+    "sugerida": "seca",
+    "resposta": "seca (0.45)"
+   },
+   {
+    "id": "16",
+    "esperada": "enchente",
+    "sugerida": "seca",
+    "resposta": "seca (0.67)"
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": "lixo",
+    "resposta": "lixo (0.75)"
+   },
+   {
+    "id": "22",
+    "esperada": "poluicao",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.39)"
+   },
+   {
+    "id": "23",
+    "esperada": "poluicao",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.39)"
+   },
+   {
+    "id": "24",
+    "esperada": "poluicao",
+    "sugerida": "lixo",
+    "resposta": "lixo (0.81)"
+   },
+   {
+    "id": "25",
+    "esperada": "poluicao",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.83)"
+   },
+   {
+    "id": "27",
+    "esperada": "lixo",
+    "sugerida": "seca",
+    "resposta": "seca (0.73)"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:38",
+  "arquitetura": "encoder"
+ },
+ {
+  "modelo": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+  "tarefa": "zero-shot",
+  "dtype": "float32",
+  "pesos_mb": 1115,
+  "motor": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+  "prompt": "—",
+  "acertos": 18,
+  "total": 30,
+  "sem_resposta": 0,
+  "s_por_relato": 0.57,
+  "s_max": 0.75,
+  "s_carga": 10.2,
+  "erros": [
+   {
+    "id": "1",
+    "esperada": "queimada",
+    "sugerida": "poluicao",
+    "resposta": "poluição (0.53)"
+   },
+   {
+    "id": "7",
+    "esperada": "queimada",
+    "sugerida": "poluicao",
+    "resposta": "poluição (0.36)"
+   },
+   {
+    "id": "9",
+    "esperada": "queimada",
+    "sugerida": "seca",
+    "resposta": "seca (0.38)"
+   },
+   {
+    "id": "11",
+    "esperada": "desmatamento",
+    "sugerida": "seca",
+    "resposta": "seca (0.46)"
+   },
+   {
+    "id": "12",
+    "esperada": "desmatamento",
+    "sugerida": "seca",
+    "resposta": "seca (0.45)"
+   },
+   {
+    "id": "16",
+    "esperada": "enchente",
+    "sugerida": "seca",
+    "resposta": "seca (0.66)"
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": "lixo",
+    "resposta": "lixo (0.75)"
+   },
+   {
+    "id": "22",
+    "esperada": "poluicao",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.39)"
+   },
+   {
+    "id": "23",
+    "esperada": "poluicao",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.40)"
+   },
+   {
+    "id": "24",
+    "esperada": "poluicao",
+    "sugerida": "lixo",
+    "resposta": "lixo (0.81)"
+   },
+   {
+    "id": "25",
+    "esperada": "poluicao",
+    "sugerida": "queimada",
+    "resposta": "queimada (0.83)"
+   },
+   {
+    "id": "27",
+    "esperada": "lixo",
+    "sugerida": "seca",
+    "resposta": "seca (0.73)"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:39",
+  "arquitetura": "encoder"
+ },
+ {
+  "modelo": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "tarefa": "gerar",
+  "dtype": "float32",
+  "pesos_mb": 1447,
+  "motor": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "prompt": "definicoes",
+  "acertos": 4,
+  "total": 30,
+  "sem_resposta": 24,
+  "s_por_relato": 1.32,
+  "s_max": 1.52,
+  "s_carga": 9.9,
+  "erros": [
+   {
+    "id": "1",
+    "esperada": "queimada",
+    "sugerida": null,
+    "resposta": "Fumaça densa na beira da"
+   },
+   {
+    "id": "2",
+    "esperada": "seca",
+    "sugerida": null,
+    "resposta": "Então, o rio baixou tant"
+   },
+   {
+    "id": "3",
+    "esperada": "desmatamento",
+    "sugerida": null,
+    "resposta": "A ãrea de mata ao l"
+   },
+   {
+    "id": "4",
+    "esperada": "enchente",
+    "sugerida": null,
+    "resposta": "Entuque: A água do"
+   },
+   {
+    "id": "5",
+    "esperada": "lixo",
+    "sugerida": null,
+    "resposta": "Entulho e pneus irregular."
+   },
+   {
+    "id": "9",
+    "esperada": "queimada",
+    "sugerida": "seca",
+    "resposta": "Uma seção de uma área"
+   },
+   {
+    "id": "10",
+    "esperada": "desmatamento",
+    "sugerida": null,
+    "resposta": "Barulho de motosserra."
+   },
+   {
+    "id": "11",
+    "esperada": "desmatamento",
+    "sugerida": null,
+    "resposta": "Caminhões carregados de made"
+   },
+   {
+    "id": "12",
+    "esperada": "desmatamento",
+    "sugerida": null,
+    "resposta": "Onde era floresta fechada"
+   },
+   {
+    "id": "13",
+    "esperada": "desmatamento",
+    "sugerida": null,
+    "resposta": "Entrada de água em mata"
+   },
+   {
+    "id": "14",
+    "esperada": "enchente",
+    "sugerida": null,
+    "resposta": "Uma rua virou um rio dep"
+   },
+   {
+    "id": "15",
+    "esperada": "enchente",
+    "sugerida": null,
+    "resposta": "Bairro inteiro alagou,"
+   },
+   {
+    "id": "17",
+    "esperada": "enchente",
+    "sugerida": null,
+    "resposta": "Choveu sem parar desde sext"
+   },
+   {
+    "id": "18",
+    "esperada": "seca",
+    "sugerida": null,
+    "resposta": "Uma cadeia de águas"
+   },
+   {
+    "id": "19",
+    "esperada": "seca",
+    "sugerida": null,
+    "resposta": "Categoria: UMA: Poços"
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": "queimada",
+    "resposta": "queimada"
+   },
+   {
+    "id": "21",
+    "esperada": "seca",
+    "sugerida": null,
+    "resposta": "Uma estiagem prolongada já ac"
+   },
+   {
+    "id": "22",
+    "esperada": "poluicao",
+    "sugerida": null,
+    "resposta": "Uma mancha de óleo no"
+   },
+   {
+    "id": "23",
+    "esperada": "poluicao",
+    "sugerida": null,
+    "resposta": "Uma fábrica solta uma"
+   },
+   {
+    "id": "24",
+    "esperada": "poluicao",
+    "sugerida": null,
+    "resposta": "Esgoto do loteamento novo est"
+   },
+   {
+    "id": "25",
+    "esperada": "poluicao",
+    "sugerida": null,
+    "resposta": "Categoria: UMA: Chaminé"
+   },
+   {
+    "id": "26",
+    "esperada": "poluicao",
+    "sugerida": null,
+    "resposta": "A água da torneira est"
+   },
+   {
+    "id": "27",
+    "esperada": "lixo",
+    "sugerida": null,
+    "resposta": "Jogaram sofá velho, col"
+   },
+   {
+    "id": "28",
+    "esperada": "lixo",
+    "sugerida": null,
+    "resposta": "Categoria: UMA: Uma co"
+   },
+   {
+    "id": "29",
+    "esperada": "lixo",
+    "sugerida": null,
+    "resposta": "A areia ficou coberta de"
+   },
+   {
+    "id": "30",
+    "esperada": "lixo",
+    "sugerida": null,
+    "resposta": "Uma caminhão despejando"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:40",
+  "arquitetura": "decoder"
+ },
+ {
+  "modelo": "Qwen/Qwen2.5-0.5B-Instruct",
+  "tarefa": "gerar",
+  "dtype": "float32",
+  "pesos_mb": 1976,
+  "motor": "Qwen/Qwen2.5-0.5B-Instruct",
+  "prompt": "simples",
+  "acertos": 4,
+  "total": 30,
+  "sem_resposta": 2,
+  "s_por_relato": 0.51,
+  "s_max": 0.86,
+  "s_carga": 10.7,
+  "erros": [
+   {
+    "id": "2",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "4",
+    "esperada": "enchente",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "5",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "6",
+    "esperada": "queimada",
+    "sugerida": "enchente",
+    "resposta": "Enchente"
+   },
+   {
+    "id": "7",
+    "esperada": "queimada",
+    "sugerida": "enchente",
+    "resposta": "Enchente"
+   },
+   {
+    "id": "8",
+    "esperada": "queimada",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "9",
+    "esperada": "queimada",
+    "sugerida": "enchente",
+    "resposta": "Enchente"
+   },
+   {
+    "id": "10",
+    "esperada": "desmatamento",
+    "sugerida": "queimada",
+    "resposta": "queimada"
+   },
+   {
+    "id": "12",
+    "esperada": "desmatamento",
+    "sugerida": "enchente",
+    "resposta": "Enchente"
+   },
+   {
+    "id": "14",
+    "esperada": "enchente",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "15",
+    "esperada": "enchente",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "16",
+    "esperada": "enchente",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "17",
+    "esperada": "enchente",
+    "sugerida": null,
+    "resposta": "Chuveiro"
+   },
+   {
+    "id": "18",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "19",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   },
+   {
+    "id": "21",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   },
+   {
+    "id": "22",
+    "esperada": "poluicao",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "23",
+    "esperada": "poluicao",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "24",
+    "esperada": "poluicao",
+    "sugerida": "enchente",
+    "resposta": "Enchente"
+   },
+   {
+    "id": "25",
+    "esperada": "poluicao",
+    "sugerida": null,
+    "resposta": "chama-vaquinha"
+   },
+   {
+    "id": "26",
+    "esperada": "poluicao",
+    "sugerida": "queimada",
+    "resposta": "queimada"
+   },
+   {
+    "id": "27",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   },
+   {
+    "id": "28",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   },
+   {
+    "id": "29",
+    "esperada": "lixo",
+    "sugerida": "enchente",
+    "resposta": "Enchente"
+   },
+   {
+    "id": "30",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:40",
+  "arquitetura": "decoder"
+ },
+ {
+  "modelo": "Qwen/Qwen2.5-0.5B-Instruct",
+  "tarefa": "gerar",
+  "dtype": "float32",
+  "pesos_mb": 1976,
+  "motor": "Qwen/Qwen2.5-0.5B-Instruct",
+  "prompt": "definicoes",
+  "acertos": 11,
+  "total": 30,
+  "sem_resposta": 0,
+  "s_por_relato": 0.79,
+  "s_max": 0.92,
+  "s_carga": 10.5,
+  "erros": [
+   {
+    "id": "2",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   },
+   {
+    "id": "3",
+    "esperada": "desmatamento",
+    "sugerida": "queimada",
+    "resposta": "queimada"
+   },
+   {
+    "id": "4",
+    "esperada": "enchente",
+    "sugerida": "queimada",
+    "resposta": "Queimada"
+   },
+   {
+    "id": "5",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "7",
+    "esperada": "queimada",
+    "sugerida": "poluicao",
+    "resposta": "poluicao"
+   },
+   {
+    "id": "9",
+    "esperada": "queimada",
+    "sugerida": "poluicao",
+    "resposta": "poluicao"
+   },
+   {
+    "id": "10",
+    "esperada": "desmatamento",
+    "sugerida": "queimada",
+    "resposta": "queimada"
+   },
+   {
+    "id": "11",
+    "esperada": "desmatamento",
+    "sugerida": "queimada",
+    "resposta": "queimada"
+   },
+   {
+    "id": "13",
+    "esperada": "desmatamento",
+    "sugerida": "queimada",
+    "resposta": "Queimada"
+   },
+   {
+    "id": "15",
+    "esperada": "enchente",
+    "sugerida": "seca",
+    "resposta": "seca"
+   },
+   {
+    "id": "16",
+    "esperada": "enchente",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "17",
+    "esperada": "enchente",
+    "sugerida": "queimada",
+    "resposta": "Queimada"
+   },
+   {
+    "id": "18",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "19",
+    "esperada": "seca",
+    "sugerida": "poluicao",
+    "resposta": "poluicao"
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   },
+   {
+    "id": "21",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   },
+   {
+    "id": "27",
+    "esperada": "lixo",
+    "sugerida": "queimada",
+    "resposta": "queimada"
+   },
+   {
+    "id": "29",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "Desmatamento"
+   },
+   {
+    "id": "30",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:41",
+  "arquitetura": "decoder"
+ },
+ {
+  "modelo": "Qwen/Qwen3-0.6B",
+  "tarefa": "gerar",
+  "dtype": "float32",
+  "pesos_mb": 2384,
+  "motor": "Qwen/Qwen3-0.6B",
+  "prompt": "definicoes",
+  "acertos": 20,
+  "total": 30,
+  "sem_resposta": 1,
+  "s_por_relato": 1.06,
+  "s_max": 1.53,
+  "s_carga": 12.0,
+  "erros": [
+   {
+    "id": "7",
+    "esperada": "queimada",
+    "sugerida": "poluicao",
+    "resposta": "poluicao"
+   },
+   {
+    "id": "9",
+    "esperada": "queimada",
+    "sugerida": "poluicao",
+    "resposta": "poluicao"
+   },
+   {
+    "id": "10",
+    "esperada": "desmatamento",
+    "sugerida": "queimada",
+    "resposta": "queimada"
+   },
+   {
+    "id": "11",
+    "esperada": "desmatamento",
+    "sugerida": "poluicao",
+    "resposta": "poluicao"
+   },
+   {
+    "id": "12",
+    "esperada": "desmatamento",
+    "sugerida": "queimada",
+    "resposta": "queimada"
+   },
+   {
+    "id": "15",
+    "esperada": "enchente",
+    "sugerida": null,
+    "resposta": "alagou"
+   },
+   {
+    "id": "16",
+    "esperada": "enchente",
+    "sugerida": "poluicao",
+    "resposta": "poluicao"
+   },
+   {
+    "id": "19",
+    "esperada": "seca",
+    "sugerida": "poluicao",
+    "resposta": "poluicao"
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   },
+   {
+    "id": "30",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:42",
+  "arquitetura": "decoder"
+ },
+ {
+  "modelo": "Qwen/Qwen2.5-1.5B-Instruct",
+  "tarefa": "gerar",
+  "dtype": "float32",
+  "pesos_mb": 6175,
+  "motor": "Qwen/Qwen2.5-1.5B-Instruct",
+  "prompt": "simples",
+  "acertos": 23,
+  "total": 30,
+  "sem_resposta": 0,
+  "s_por_relato": 1.42,
+  "s_max": 1.54,
+  "s_carga": 15.4,
+  "erros": [
+   {
+    "id": "2",
+    "esperada": "seca",
+    "sugerida": "enchente",
+    "resposta": "enchente"
+   },
+   {
+    "id": "7",
+    "esperada": "queimada",
+    "sugerida": "enchente",
+    "resposta": "enchente"
+   },
+   {
+    "id": "9",
+    "esperada": "queimada",
+    "sugerida": "enchente",
+    "resposta": "Enchente"
+   },
+   {
+    "id": "19",
+    "esperada": "seca",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": "enchente",
+    "resposta": "enchente"
+   },
+   {
+    "id": "24",
+    "esperada": "poluicao",
+    "sugerida": "lixo",
+    "resposta": "lixo"
+   },
+   {
+    "id": "30",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:43",
+  "arquitetura": "decoder"
+ },
+ {
+  "modelo": "Qwen/Qwen2.5-1.5B-Instruct",
+  "tarefa": "gerar",
+  "dtype": "float32",
+  "pesos_mb": 6175,
+  "motor": "Qwen/Qwen2.5-1.5B-Instruct",
+  "prompt": "definicoes",
+  "acertos": 27,
+  "total": 30,
+  "sem_resposta": 0,
+  "s_por_relato": 2.8,
+  "s_max": 3.58,
+  "s_carga": 16.6,
+  "erros": [
+   {
+    "id": "2",
+    "esperada": "seca",
+    "sugerida": "enchente",
+    "resposta": "enchente"
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": "enchente",
+    "resposta": "enchente"
+   },
+   {
+    "id": "30",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:44",
+  "arquitetura": "decoder"
+ },
+ {
+  "modelo": "Qwen/Qwen3-1.7B",
+  "tarefa": "gerar",
+  "dtype": "float32",
+  "pesos_mb": 6882,
+  "motor": "Qwen/Qwen3-1.7B",
+  "prompt": "definicoes",
+  "acertos": 27,
+  "total": 30,
+  "sem_resposta": 0,
+  "s_por_relato": 2.97,
+  "s_max": 3.3,
+  "s_carga": 18.2,
+  "erros": [
+   {
+    "id": "2",
+    "esperada": "seca",
+    "sugerida": "enchente",
+    "resposta": "enchente"
+   },
+   {
+    "id": "9",
+    "esperada": "queimada",
+    "sugerida": "poluicao",
+    "resposta": "poluicao"
+   },
+   {
+    "id": "10",
+    "esperada": "desmatamento",
+    "sugerida": "queimada",
+    "resposta": "queimada"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:46",
+  "arquitetura": "decoder"
+ },
+ {
+  "modelo": "Qwen/Qwen2.5-1.5B-Instruct",
+  "tarefa": "gerar",
+  "dtype": "bfloat16",
+  "pesos_mb": 3087,
+  "motor": "Qwen/Qwen2.5-1.5B-Instruct",
+  "prompt": "definicoes",
+  "acertos": 27,
+  "total": 30,
+  "sem_resposta": 0,
+  "s_por_relato": 12.93,
+  "s_max": 13.92,
+  "s_carga": 17.1,
+  "erros": [
+   {
+    "id": "2",
+    "esperada": "seca",
+    "sugerida": "enchente",
+    "resposta": "enchente"
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": "enchente",
+    "resposta": "enchente"
+   },
+   {
+    "id": "30",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:53",
+  "arquitetura": "decoder"
+ },
+ {
+  "modelo": "Qwen/Qwen2.5-1.5B-Instruct",
+  "tarefa": "pontuar",
+  "dtype": "float32",
+  "pesos_mb": 6175,
+  "motor": "Qwen/Qwen2.5-1.5B-Instruct",
+  "prompt": "definicoes",
+  "acertos": 27,
+  "total": 30,
+  "sem_resposta": 0,
+  "s_por_relato": 2.23,
+  "s_max": 2.38,
+  "s_carga": 15.4,
+  "erros": [
+   {
+    "id": "2",
+    "esperada": "seca",
+    "sugerida": "enchente",
+    "resposta": "enchente (1.00)"
+   },
+   {
+    "id": "20",
+    "esperada": "seca",
+    "sugerida": "enchente",
+    "resposta": "enchente (0.81)"
+   },
+   {
+    "id": "30",
+    "esperada": "lixo",
+    "sugerida": "desmatamento",
+    "resposta": "desmatamento (0.96)"
+   }
+  ],
+  "maquina": "Windows 11 · 12 núcleos lógicos · medido na CPU",
+  "medido_em": "27/10/2026 18:56",
+  "arquitetura": "decoder"
+ }
+]

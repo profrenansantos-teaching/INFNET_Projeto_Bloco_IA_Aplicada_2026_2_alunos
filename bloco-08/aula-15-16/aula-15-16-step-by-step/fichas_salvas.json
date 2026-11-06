@@ -1,0 +1,133 @@
+[
+ {
+  "modelo": "facebook/bart-large-mnli",
+  "tarefa": "zero-shot-classification",
+  "linguas": [],
+  "licenca": "mit",
+  "gated": false,
+  "parametros_mi": 407,
+  "download_mb": 1629,
+  "ram_float32_mb": 1629
+ },
+ {
+  "modelo": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+  "tarefa": "zero-shot-classification",
+  "linguas": [
+   "multilingual",
+   "en",
+   "ar",
+   "bg",
+   "de",
+   "el",
+   "es",
+   "fr",
+   "hi",
+   "ru",
+   "sw",
+   "th",
+   "tr",
+   "ur",
+   "vi",
+   "zh"
+  ],
+  "licenca": "mit",
+  "gated": false,
+  "parametros_mi": 107,
+  "download_mb": 428,
+  "ram_float32_mb": 428
+ },
+ {
+  "modelo": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+  "tarefa": "zero-shot-classification",
+  "linguas": [
+   "multilingual",
+   "zh",
+   "ja",
+   "ar",
+   "ko",
+   "de",
+   "fr",
+   "es",
+   "pt",
+   "hi",
+   "id",
+   "it",
+   "tr",
+   "ru",
+   "bn",
+   "ur",
+   "mr",
+   "ta",
+   "vi",
+   "fa",
+   "pl",
+   "uk",
+   "nl",
+   "sv",
+   "he",
+   "sw",
+   "ps"
+  ],
+  "licenca": "mit",
+  "gated": false,
+  "parametros_mi": 279,
+  "download_mb": 558,
+  "ram_float32_mb": 1115
+ },
+ {
+  "modelo": "neuralmind/bert-base-portuguese-cased",
+  "tarefa": "fill-mask",
+  "linguas": "pt",
+  "licenca": "mit",
+  "gated": false,
+  "parametros_mi": null,
+  "download_mb": 438,
+  "ram_float32_mb": null
+ },
+ {
+  "modelo": "Qwen/Qwen2.5-0.5B-Instruct",
+  "tarefa": "text-generation",
+  "linguas": [
+   "en"
+  ],
+  "licenca": "apache-2.0",
+  "gated": false,
+  "parametros_mi": 494,
+  "download_mb": 988,
+  "ram_float32_mb": 1976
+ },
+ {
+  "modelo": "Qwen/Qwen2.5-1.5B-Instruct",
+  "tarefa": "text-generation",
+  "linguas": [
+   "en"
+  ],
+  "licenca": "apache-2.0",
+  "gated": false,
+  "parametros_mi": 1544,
+  "download_mb": 3087,
+  "ram_float32_mb": 6175
+ },
+ {
+  "modelo": "Qwen/Qwen2.5-3B-Instruct",
+  "tarefa": "text-generation",
+  "linguas": [
+   "en"
+  ],
+  "licenca": "other",
+  "gated": false,
+  "parametros_mi": 3086,
+  "download_mb": 6172,
+  "ram_float32_mb": 12344
+ },
+ {
+  "modelo": "google/gemma-3-1b-it",
+  "tarefa": "text-generation",
+  "linguas": [],
+  "licenca": "gemma",
+  "gated": "manual",
+  "parametros_mi": 1000,
+  "download_mb": 2000,
+  "ram_float32_mb": 4000
+ }
+]

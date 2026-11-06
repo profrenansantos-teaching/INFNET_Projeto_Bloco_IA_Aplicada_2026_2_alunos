@@ -1,0 +1,292 @@
+# Publicar o Painel ODS no Streamlit Community Cloud
+
+> Roteiro executável da **Aula 5** (PB Etapa 3 · subcompetência 2.1).
+> Fonte de referência: RICHARDS, T. *Streamlit for Data Science*, 2ª ed., cap. 5. Citações no formato
+> `[Richards, pXX]` remetem à página do PDF.
+
+## 0 · O que o Community Cloud precisa (o contrato)
+
+Exatamente quatro coisas — e **toda** falha de deploy é a falta de uma delas:
+
+| # | Item | No nosso projeto |
+|---|------|------------------|
+| 1 | **Repositório** no GitHub (público, por padrão) | `painel-ods-brasil` |
+| 2 | **Branch** | `main` |
+| 3 | **Arquivo principal** (o `.py` que ele executa) | `app.py` |
+| 4 | **`requirements.txt`** | `streamlit>=1.40` · `requests>=2.28` |
+
+> "Streamlit Community Cloud runs using GitHub." [Richards, p174]
+
+## 1 · Antes de tudo: conferir o ambiente
+
+```bash
+python ../../../../bloco-03/aula-05/aula-05-step-by-step/verificar_ambiente.py
+```
+
+O script checa versão do Python, dependências declaradas × instaladas, presença do `.gitignore`,
+segredos versionados por engano e caminhos frágeis. **Só siga com tudo em ✅.**
+
+## 2 · Ambiente reprodutível
+
+```bash
+python -m venv .venv
+
+# Windows (PowerShell)
+.venv\Scripts\Activate.ps1
+# macOS / Linux
+source .venv/bin/activate
+
+pip install -r requirements.txt
+streamlit run app.py          # confirme que roda antes de publicar
+```
+
+**Regra:** instalou biblioteca nova → acrescenta ao `requirements.txt` **na mesma hora**. Esquecer isso
+é a causa nº 1 de deploy quebrado (`ModuleNotFoundError`).
+
+## 3 · Repositório
+
+O `.gitignore` **já existe** neste projeto. Confirme que ele está no lugar **antes** do primeiro
+`git add` — o `.gitignore` não remove o que já foi rastreado.
+
+```bash
+git init -b main
+git status                    # confira o que será incluído: NÃO pode aparecer .venv/ nem secrets.toml
+git add .
+git commit -m "Painel ODS v3: projeto pronto para publicação"
+```
+
+No site do GitHub: **New repository** → nome `painel-ods-brasil` → **Create repository**
+[Richards, p180–181]. Depois [Richards, p183]:
+
+```bash
+git remote add origin https://github.com/SEU_USUARIO/painel-ods-brasil
+git push -u origin main
+```
+
+## 4 · Deploy
+
+1. Acesse **share.streamlit.io** e entre com a conta do GitHub
+   (cadastro gratuito: `https://share.streamlit.io/signup` [Richards, p173]).
+2. **New app** → aponte **repositório**, **branch** (`main`) e **arquivo principal** (`app.py`)
+   [Richards, p185].
+3. **Deploy.** O serviço instala o `requirements.txt`, executa o `app.py` e devolve **uma URL própria**.
+
+## 5 · Atualizar o app publicado
+
+> "Whenever we make changes to the GitHub repository, we will see such changes reflected in the app."
+> [Richards, p185]
+
+```bash
+git add .
+git commit -m "descreve o que mudou"
+git push
+```
+
+Recarregue a URL. *"It may take a couple of minutes for the app to reload!"* [Richards, p187]
+O rodapé do app mostra a `VERSAO` — use-o para confirmar, olhando a página, que o `push` chegou lá.
+
+## 6 · Quando quebra: os logs
+
+**Manage app** (canto inferior direito do app publicado) → logs; dali também dá para **reiniciar**,
+**excluir** e **baixar os logs** [Richards, p188].
+
+| O log diz | Causa | Correção |
+|-----------|-------|----------|
+| `ModuleNotFoundError: No module named 'X'` | dependência não declarada | acrescentar ao `requirements.txt` → `push` |
+| `FileNotFoundError: ... .json` | caminho relativo ao diretório de execução | ancorar em `Path(__file__)` (já feito em `src/data_access.py`) |
+| `Error installing requirements` | versão inexistente ou erro de digitação | corrigir a linha → `push` |
+| App carrega mas mostra "cache local" | a API do IBGE não respondeu | esperado: é o *fallback*. Confira em `Manage app` se há erro de rede |
+
+## 7 · Segredos
+
+O repositório é **público** por padrão: *"the default in Streamlit Community Cloud is to use public
+GitHub repositories with entirely public code, data, and models"* [Richards, p188].
+
+| Onde | Arquivo/lugar | Vai para o Git? |
+|------|---------------|-----------------|
+| Local | `.streamlit/secrets.toml` | ❌ **nunca** (está no `.gitignore`) |
+| Repositório | `.streamlit/secrets.toml.example` (chaves em branco) | ✅ sim |
+| No ar | **Edit secrets** no painel do Community Cloud [Richards, p190] | — |
+
+No código, lê-se com `st.secrets["nome"]` [Richards, p191].
+
+> ⚠️ Commitou um segredo e apagou depois? **O histórico guarda.** A chave precisa ser **revogada e
+> trocada** — apagar o arquivo não basta.
+
+## 8 · Limites do plano gratuito
+
+- **Memória: de 690 MB a 2,7 GB por app; CPU: de 0,078 a 2 núcleos** (documentação do Streamlit,
+  limites publicados em fev/2024, "sujeitos a mudança"). O livro, de 2023, fala em 1 GB [Richards, p267].
+- Repositório público por padrão; o app publicado ganha automaticamente um botão para ver o código no
+  GitHub e um botão **Share** para o dono [Richards, p365].
+- Apps **sem acesso por 12 horas** hibernam e reacordam no primeiro acesso (documentação do Streamlit).
+
+## Alternativas (para saber que existem)
+
+| Via | Custo | Observação |
+|-----|-------|------------|
+| **Streamlit Community Cloud** | grátis | "easiest and preferred method for most Streamlit users" [Richards, p172] |
+| AWS / Heroku | pago | controle de recursos; cap. 8 do livro |
+| Hugging Face Spaces | grátis | forte para apps de ML; cap. 8/11 do livro |
+
+## 9 · E quando o app vira multipáginas? (v7 · Aula 9)
+
+**Nada muda no deploy.** O **arquivo principal continua sendo `app.py`** — agora um roteador — e o
+contrato de quatro itens é o mesmo. Três conferências antes do `push`:
+
+| Conferir | Por quê |
+|----------|---------|
+| a pasta `paginas/` e o `comum.py` foram **commitados** (`git status`) | página que não subiu = `StreamlitPageNotFoundError` no ar |
+| os caminhos em `st.Page("paginas/…")` batem com os nomes dos arquivos, **inclusive maiúsculas** | o servidor do Community Cloud é Linux: `Paginas/` ≠ `paginas/` |
+| nenhuma dependência nova | `st.navigation` e `st.Page` vêm com o Streamlit (≥ 1.36) |
+
+## 10 · E o Selenium? (v8 · Aula 10)
+
+**Na v8, ele não vai para o Community Cloud — por escolha.** A coleta roda na sua máquina
+(`python -m src.coleta_dinamica`), grava `data/processed/desmatamento_prodes.csv`, e é esse CSV que sobe
+com o `git push`. O app só lê.
+
+| Arquivo | Quem instala | Tem Selenium? |
+|---------|--------------|:-------------:|
+| `requirements.txt` | o Community Cloud (e você, para rodar o app) | ❌ |
+| `requirements-coleta.txt` | só você, para coletar (`-r requirements.txt` + `selenium`) | ✅ |
+
+Antes do push: confira que `data/processed/desmatamento_*.{csv,json}` estão no `git status` — e que
+`data/raw/prodes_renderizado.html` **não** está (conteúdo de terceiros, regenerável).
+
+### 10.1 E se eu QUISER o Selenium no app publicado? (aprofundamento)
+
+**Dá.** O Community Cloud roda em Debian e **não traz navegador**, mas instala pacotes do sistema
+listados num `packages.txt` **na raiz** do repositório:
+
+```text
+chromium
+chromium-driver
+```
+
+(uma linha por pacote, **sem comentários** — cada linha vai para o instalador do sistema.) E o
+`selenium` passa a ir no **`requirements.txt`**, porque agora o app o importa.
+
+No código, três escolhas tornam isso viável — o exemplo completo e testado está em
+`../../../../bloco-05/aula-10/aula-10-step-by-step/passo06_selenium_no_app/app.py`:
+
+| Escolha | Por quê |
+|---------|---------|
+| `@st.cache_data(ttl=3600)` **na coleta** | o cache é compartilhado: o navegador abre **no máximo uma vez por hora, para todos**. Sem isso, um Chrome por rerun |
+| navegador **aberto e fechado** dentro da função cacheada (`with`) | em `@st.cache_resource` ele ficaria aberto para sempre e seria dividido entre sessões |
+| a **falha também vai para o cache** (devolvida, não levantada) | exceção não é cacheada: uma coleta que falha abriria um Chrome novo a cada rerun |
+
+E, no servidor, `--headless=new --no-sandbox --disable-dev-shm-usage` e o driver do sistema
+(`Service(shutil.which("chromedriver"))`), pareado com o Chromium que o `packages.txt` instalou.
+
+**Verificado localmente** (23/09/2026): 1ª coleta **6,1 s**, reruns **0 ms**, nenhum navegador aberto
+depois; falha servida do cache em **0,01 s**. Um Chrome sem janela ocupou **380 MB vazio e ~640 MB**
+com o PRODES carregado.
+
+**Não verificado por nós no Community Cloud.** O `packages.txt` é documentado pelo Streamlit; `chromium`
++ `chromium-driver` vêm de projetos de referência e do fórum — onde também há relatos de
+`chromium-driver` não encontrado (jun/2025) e de navegador e driver em versões diferentes.
+
+**O preço, resumido:** 380–640 MB por navegador num app de 690 MB–2,7 GB; *build* que depende de
+pacotes do sistema; o servidor fora do Brasil (há sites que bloqueiam por localização — não testamos
+o INPE); e, depois de 12 h de hibernação, o primeiro visitante paga a coleta. **Vale quando o dado
+precisa ser mais fresco que a última coleta.** Para uma taxa anual, não vale — por isso a v8 coleta à
+parte.
+
+## 11 · E a API? (v9 · Aula 11)
+
+**A API não vai para o Community Cloud.** Ele roda o **arquivo principal com o Streamlit** — o contrato
+de quatro itens da seção 0 — e é esse app que fica acessível pela URL. Uma API FastAPI precisa de um
+servidor próprio (o `uvicorn`), e o Community Cloud não o publica. Na v9 a API roda **na sua máquina**,
+noutro terminal:
+
+```bash
+pip install -r requirements-api.txt      # -r requirements.txt + fastapi + uvicorn
+uvicorn api.main:app --reload            # da pasta painel_ods_brasil/  ->  http://127.0.0.1:8000/docs
+```
+
+| Arquivo | Quem instala | Tem FastAPI? |
+|---------|--------------|:------------:|
+| `requirements.txt` | o Community Cloud (e você, para rodar o app) | ❌ |
+| `requirements-api.txt` | só você, para rodar a API (`-r requirements.txt` + `fastapi` + `uvicorn`) | ✅ |
+
+**O `git push` leva a pasta `api/` junto** — e não faz mal nenhum: o Community Cloud não a importa. Ela
+fica no repositório porque faz parte do projeto (o TP3 pede a aplicação **integrada** com a API), e
+quem clonar o repositório roda as duas coisas.
+
+**E para publicar a API?** Seria outro serviço, que hospede um servidor Python (o livro do FastAPI
+empacota a aplicação com Docker e aponta plataformas de nuvem [Adeshina, p192–203]). **Fora do escopo
+do TP3 — e não verificado por nós.** O TP4 integra um LLM **local** à mesma API, rodando na sua
+máquina: o padrão da Etapa 6 continua valendo lá.
+
+## 12 · E a página Relatos, no app publicado? (v10 · Aula 12)
+
+**No Community Cloud, a página abre — e o envio fica desligado.** O app publicado procura a API em
+`http://127.0.0.1:8000`, que **lá** é o próprio servidor do Community Cloud, onde nenhuma API está rodando.
+A página percebe (a conexão é recusada na hora), avisa, desliga o formulário e mostra os relatos de
+**exemplo** de `data/sample/relatos_exemplo.csv`. É o plano B da Aula 2 — e é o comportamento certo:
+um painel publicado não pode quebrar porque um serviço que roda na **sua** máquina está desligado.
+*(Verificado localmente, com a API desligada — `AppTest`: aviso, formulário desligado, 5 exemplos, zero
+exceções. No Community Cloud, o comportamento esperado é o mesmo; não testado por nós.)*
+
+| Onde | A API está no ar? | A página Relatos |
+|------|:----------------:|------------------|
+| Na sua máquina, com `uvicorn api.main:app --reload` | ✅ | envia, lista, filtra — ao vivo |
+| Na sua máquina, sem o `uvicorn` | ❌ | avisa + exemplos fictícios |
+| No Community Cloud | ❌ | avisa + exemplos fictícios |
+
+**O endereço é configuração, não código** (a regra da Aula 5): se um dia a API estiver publicada noutro
+serviço, basta declarar `api_url = "https://…"` nos **Secrets** do app (ou `PAINEL_ODS_API_URL` no
+ambiente) — `src/cliente_api.py` lê de lá. *(Publicar a API está fora do escopo do PB; o TP4 também roda local.)*
+
+**Antes do push:** confira que `data/relatos/` **não** aparece no `git status` (está no `.gitignore`:
+conteúdo enviado por pessoas não vai para um repositório público). `data/sample/relatos_exemplo.csv`, sim.
+
+## 13 · E o Analisador, no app publicado? (v11 · Aula 13)
+
+**No Community Cloud, a página 🔎 Analisador abre com um aviso e não analisa.** O analisador mora na **API**
+(`POST /processar_texto`), e a API roda na sua máquina — o mesmo motivo da página Relatos (§12). A página
+percebe que a API não responde, avisa e para (`st.stop()`), sem traceback. *(Verificado localmente com a API
+desligada — `AppTest`: aviso, zero exceções. No Community Cloud, não testado por nós.)*
+
+**Nada novo para instalar.** O motor provisório é Python puro (`re` + `json`), e as regras ficam em
+`data/analisador/regras.json` — **versionado**: é configuração do projeto, não dado de pessoas.
+
+> **E na Etapa 8?** O motor vira um **modelo LLM local** (HuggingFace), carregado pela API. Ele também roda na
+> sua máquina — o TP4 pede o modelo *"rodando inteiramente no ambiente local"*. O Community Cloud continua
+> rodando só o painel, e a página Analisador continua avisando quando a API não está no ar.
+
+## 14 · E os erros, no app publicado? (v12 · Aula 14)
+
+**Nada muda no Community Cloud.** A API continua rodando só na sua máquina; no app publicado, as páginas
+Relatos e Analisador continuam abrindo com o aviso de "API fora do ar" (§12 e §13). Os novos erros (404, 409,
+503, 500 em JSON) aparecem **quando a API está no ar** — na sua máquina.
+
+**Antes do push, confira o que a API diz ao subir.** Se `data/analisador/regras.json` não estiver no
+repositório (um `.gitignore` largo demais, um arquivo esquecido), quem clonar verá, no terminal do `uvicorn`:
+
+```
+ERROR:    Analisador NÃO carregado — FileNotFoundError: … A rota /processar_texto vai responder 503.
+```
+
+A API sobe e o resto funciona — mas a análise não. **Versione `regras.json`**: é configuração do projeto.
+
+**O código do 500 é para você.** Quando alguém disser *"apareceu 'Erro interno na API (código 1ab3df0d)'"*,
+procure `1ab3df0d` no terminal do `uvicorn`: a linha `Erro inesperado [1ab3df0d] em GET /relatos — KeyError: 'id'`
+e o traceback logo abaixo. O traceback **nunca** vai para o cliente.
+
+## 15 · E o modelo de linguagem, no app publicado? (v13 · Aula 15)
+
+**O modelo não vai para o Community Cloud — nem para o GitHub.**
+
+| O quê | Onde mora | Vai para o Git? |
+|-------|-----------|:---------------:|
+| os pesos do modelo (3,1 GB) | a pasta de cache do Hugging Face, **fora** do projeto (`~/.cache/huggingface/hub`) | **não** — o GitHub recusa arquivos acima de 100 MB, e os pesos não são nossos para redistribuir |
+| `transformers`, `torch` | `requirements-api.txt` — o ambiente da API | o arquivo, sim; o Cloud não o instala |
+| o banco de provas, a bancada, `avaliacao.json`, `docs/escolha_do_modelo.md` | o projeto | **sim** — é o que **reproduz** a escolha |
+
+**A página 🧪 Escolha do modelo funciona no app publicado**: ela só **lê** `avaliacao.json` e o documento — não importa
+`torch` nem carrega modelo (verificado com `AppTest` num ambiente sem `torch`). O `requirements.txt` **não muda**.
+
+**Antes do push, rode a bancada de novo** se mudou o banco de provas, as regras ou o prompt: a página mostra o que está
+em `avaliacao.json` — se ele estiver velho, a página mente com números verdadeiros de outra versão.

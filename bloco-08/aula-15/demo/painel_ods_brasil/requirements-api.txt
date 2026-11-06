@@ -1,0 +1,40 @@
+# Ambiente da API — Painel ODS Brasil (v9, Aula 11 · o modelo de linguagem entra na v13, Aula 15)
+#
+# A API roda NA SUA MÁQUINA, noutro terminal, ao lado do app:
+#     uvicorn api.main:app --reload        (da pasta painel_ods_brasil/)
+#
+# Por que um arquivo só para ela — a mesma regra do requirements-coleta.txt:
+#   · o Community Cloud instala o requirements.txt e roda o app Streamlit. O app
+#     não importa o FastAPI; lá, ele seria peso morto no build;
+#   · o que se importa, se declara (Aula 5) — no arquivo do ambiente que importa.
+#
+# A API reaproveita src/ (as mesmas leituras do painel), por isso inclui tudo
+# o que o app usa.
+-r requirements.txt
+
+# O framework. Traz o Pydantic (validação pelos tipos) e o Starlette.
+fastapi>=0.115
+
+# O servidor que RODA a API. O Streamlit 1.61 já o instala por dependência própria
+# — mas a API o usa diretamente, e depender de dependência alheia é apostar que ela
+# nunca vai mudar (a lição do urllib3, na v3).
+uvicorn>=0.30
+
+# NÃO usamos "fastapi[standard]": ele traz o comando `fastapi dev` e mais uma dúzia
+# de pacotes (httpx, jinja2, email-validator, fastapi-cloud-cli…) que esta API não usa.
+
+# --- O modelo de linguagem (v13, Aula 15) ------------------------------------------
+# A ficha e a bancada (src/ficha_modelo.py, src/bancada.py) rodam neste ambiente, e o
+# modelo escolhido vai morar na API (Aula 16). O app publicado NÃO importa nada disto:
+# no Community Cloud seria peso morto (a lição do requirements-coleta.txt, de novo).
+#
+# Transformers: baixa o modelo do Hugging Face e o roda NA SUA MÁQUINA (o TP4 pede local).
+transformers>=5.0
+# A biblioteca que faz as contas do modelo. Na CPU, sem placa de vídeo.
+#   Windows e Mac: `pip install -r requirements-api.txt` traz a versão de CPU (~125 MB).
+#   Linux: o pacote padrão traz também a CUDA da NVIDIA (vários GB). Instale ANTES a de CPU:
+#       pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.6
+# A ficha consulta o Hub diretamente (HfApi). Já vem com o transformers — mas o que se
+# importa, se declara (a lição do urllib3, na v3).
+huggingface_hub>=1.0

@@ -1,0 +1,9 @@
+{
+  "_sobre": "Regras do analisador de relatos (v11, Aula 13): para cada categoria, as palavras que a denunciam. Editável à mão. Na Etapa 8, um modelo LLM local substitui estas regras — e a rota POST /processar_texto continua respondendo no mesmo formato.",
+  "queimada": ["fumaça", "fogo", "queimada", "queimado", "queimando", "incêndio", "chamas", "cinzas", "foco de calor"],
+  "desmatamento": ["desmatamento", "desmatada", "derrubada", "derrubaram", "motosserra", "toras", "troncos", "corte de árvores", "correntão"],
+  "enchente": ["enchente", "alagamento", "alagou", "alagada", "inundação", "inundou", "transbordou", "cheia"],
+  "seca": ["seca", "estiagem", "nível do rio", "baixou", "sem chuva", "secou", "rachada"],
+  "poluicao": ["poluição", "esgoto", "óleo", "mancha", "peixes mortos", "fumaça preta", "mau cheiro", "espuma"],
+  "lixo": ["lixo", "entulho", "descarte", "pneus", "resíduos", "sacos de lixo", "lixão"]
+}

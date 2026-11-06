@@ -36,6 +36,7 @@ forma de ver a progressão.
 | **11** | [bloco-06/aula-11/](bloco-06/aula-11/) | Do outro lado da API (FastAPI: o ambiente e as primeiras rotas) | 6 | TP3 |
 | **12** | [bloco-06/aula-12/](bloco-06/aula-12/) | Quem recebe, valida (FastAPI: POST, validação, routers, o painel como cliente) | 6 | TP4 |
 | **13–14** | [bloco-07/aula-13-14/](bloco-07/aula-13-14/) · [aula-13/](bloco-07/aula-13/) · [aula-14/](bloco-07/aula-14/) | Quem responde, promete; quem falha, explica (FastAPI: response models e exceções HTTP) | 7 | TP4 |
+| **15–16** | [bloco-08/aula-15-16/](bloco-08/aula-15-16/) · [aula-15/](bloco-08/aula-15/) · [aula-16/](bloco-08/aula-16/) | Quem escolhe, mede; quem pesa, carrega uma vez (o modelo LLM: escolher medindo e integrar com FastAPI) | 8 | TP4 |
 
 > As aulas 1 e 2 têm uma **versão paralela para Google Colab** (pastas `-colab`): o mesmo conteúdo,
 > com a parte de dados rodando no navegador, sem instalar nada. O **app Streamlit** continua local.
@@ -90,6 +91,10 @@ app — sempre **da pasta `painel_ods_brasil/`**:
 pip install -r requirements-api.txt      # tudo do app + fastapi + uvicorn
 uvicorn api.main:app --reload            # e abra http://127.0.0.1:8000/docs
 ```
+
+A partir da Aula 15, o `requirements-api.txt` traz também o **modelo de linguagem** (`transformers`, `torch`), e os pesos
+dos modelos são baixados **uma vez**, com internet. A API com o modelo sobe **sem** `--reload`. Os tamanhos, a memória e os
+comandos estão no [README do Bloco 8](bloco-08/README.md).
 
 ---
 
